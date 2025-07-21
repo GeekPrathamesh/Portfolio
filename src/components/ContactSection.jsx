@@ -47,64 +47,63 @@ export const ContactSection = () => {
               {" "}
               Contact Information
             </h3>
+<div className="space-y-6">
+  {/* Email */}
+  <div className="flex items-center space-x-4">
+    <div className="p-3 rounded-full bg-primary/10">
+      <Mail className="h-6 w-6 text-primary" />
+    </div>
+    <div className="text-left">
+      <h4 className="font-medium">Email</h4>
+      <a
+        href="mailto:prathamesh.workx@gmail.com"
+        className="text-muted-foreground hover:text-primary transition-colors"
+      >
+        prathamesh.workx@gmail.com
+      </a>
+    </div>
+  </div>
 
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Email</h4>
-                  <a
-                    href="mailto:hello@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    hello@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Phone</h4>
-                  <a
-                    href="tel:+11234567890"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    +1 (123) 456-7890
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
-                  </a>
-                </div>
-              </div>
-            </div>
+  {/* Phone */}
+  <div className="flex items-center space-x-4">
+    <div className="p-3 rounded-full bg-primary/10">
+      <Phone className="h-6 w-6 text-primary" />
+    </div>
+    <div className="text-left">
+      <h4 className="font-medium">Phone</h4>
+      <a
+        href="tel:+919423341615"
+        className="text-muted-foreground hover:text-primary transition-colors"
+      >
+        9423341615
+      </a>
+    </div>
+  </div>
+
+  {/* Location */}
+  <div className="flex items-center space-x-4">
+    <div className="p-3 rounded-full bg-primary/10">
+      <MapPin className="h-6 w-6 text-primary" />
+    </div>
+    <div className="text-left">
+      <h4 className="font-medium">Location</h4>
+      <p className="text-muted-foreground">Kharghar, Navi Mumbai</p>
+    </div>
+  </div>
+</div>
+
 
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/in/geekprathamesh/" target="_blank">
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitter />
-                </a>
-                <a href="#" target="_blank">
+
+                <a href="https://www.instagram.com/geekprathamesh/" target="_blank">
                   <Instagram />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitch />
-                </a>
+
               </div>
             </div>
           </div>
@@ -130,7 +129,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Pedro Machado..."
+                  placeholder="Prathamesh..."
                 />
               </div>
 
@@ -148,7 +147,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  placeholder="abc@gmail.com"
                 />
               </div>
 

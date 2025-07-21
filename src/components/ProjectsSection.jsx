@@ -3,20 +3,20 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
+    title: "Host-Hunter",
+    description: "An AI-powered web security tool for detecting fraudulent websites using DNS and hosting pattern analysis, offering real-time monitoring and automated threat detection.",
     image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    tags: ["React.js ", "TailwindCSS", "Node.js","DNS Libraries"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Web-Audio-PlayerX",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "🎵 WebAudioPlayerX is a sleek Spotify-inspired music streaming web app built with React.js and Tailwind CSS. It features real-time song playback, modern UI, responsive design, and playlist-style navigation. Perfect for showcasing frontend skills and UI/UX design.",
     image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    tags: ["React.js ", "TailwindCSS"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -24,9 +24,9 @@ const projects = [
     id: 3,
     title: "E-commerce Platform",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "A modern React-based news web app that fetches real-time headlines across categories like business, technology, entertainment, and more using the NewsAPI. It features a clean UI, loading spinners, and infinite scroll for a smooth user experience. Built with React.js, Bootstrap, and JavaScript, the app demonstrates efficient API integration and dynamic component rendering.",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["React.js ", "Conditional Rendering", "Bootstrap "],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -42,8 +42,7 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
+          Here are some of my recent projects..
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -100,7 +99,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/GeekPrathamesh"
           >
             Check My Github <ArrowRight size={16} />
           </a>
