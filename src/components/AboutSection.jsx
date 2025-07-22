@@ -22,10 +22,9 @@ export const AboutSection = () => {
             </p>
 
             <p className="text-muted-foreground">
-              I specialize in building responsive, accessible, and performance-focused web applications using React.js, JavaScript, and modern frontend technologies.
+              I specialize in building responsive, accessible, and performance-optimized web applications using React.js, JavaScript, and modern frontend technologies.
 
-I'm passionate about solving real-world problems through clean and efficient code. As a Smart India Hackathon 2024 winner, I’ve worked on impactful solutions in a high-pressure, innovation-driven environment. I’m always learning and iterating — aiming to create intuitive user experiences while keeping up with the fast-paced changes in the web development landscape.
-
+I'm passionate about solving real-world problems with clean, efficient, and maintainable code. As a Smart India Hackathon 2024 winner, I’ve contributed to impactful, real-time solutions under high-pressure, innovation-driven settings. I’m committed to continuous learning and iteration — striving to craft intuitive user experiences while staying aligned with the ever-evolving web development landscape.
 
             </p>
 
