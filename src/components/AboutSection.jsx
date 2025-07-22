@@ -22,10 +22,11 @@ export const AboutSection = () => {
             </p>
 
             <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+              I specialize in building responsive, accessible, and performance-focused web applications using React.js, JavaScript, and modern frontend technologies.
+
+I'm passionate about solving real-world problems through clean and efficient code. As a Smart India Hackathon 2024 winner, I’ve worked on impactful solutions in a high-pressure, innovation-driven environment. I’m always learning and iterating — aiming to create intuitive user experiences while keeping up with the fast-paced changes in the web development landscape.
+
+
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
