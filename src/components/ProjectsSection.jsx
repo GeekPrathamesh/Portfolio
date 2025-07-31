@@ -22,7 +22,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Platform to read fresh latest news",
     description:
       "A modern React-based news web app that fetches real-time headlines across categories like business, technology, entertainment, and more using the NewsAPI. It features a clean UI, loading spinners, and infinite scroll for a smooth user experience. Built with React.js, Bootstrap, and JavaScript, the app demonstrates efficient API integration and dynamic component rendering.",
     image: "/projects/project3.png",
