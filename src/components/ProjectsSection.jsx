@@ -16,7 +16,7 @@ const projects = [
     description:
       "🎵 WebAudioPlayerX is a sleek Spotify-inspired music streaming web app built with React.js and Tailwind CSS. It features real-time song playback, modern UI, responsive design, and playlist-style navigation. Perfect for showcasing frontend skills and UI/UX design.",
     image: "/projects/project2.png",
-    tags: ["React.js ", "TailwindCSS"],
+    tags: ["React.js ", "TailwindCSS" ,"Node.js", "database" ],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -37,7 +37,6 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
           Featured <span className="text-primary"> Projects </span>
         </h2>
 
@@ -48,50 +47,60 @@ export const ProjectsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
             <div
-              key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
-            >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
+  key={key}
+  className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col"
+>
+  {/* Image */}
+  <div className="h-48 overflow-hidden">
+    <img
+      src={project.image}
+      alt={project.title}
+      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+  </div>
 
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+  {/* Content fills remaining height */}
+  <div className="p-6 flex flex-col justify-between flex-1">
+    <div>
+      <div className="flex flex-wrap gap-2 mb-4">
+        {project.tags.map((tag, i) => (
+          <span
+            key={i}
+            className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {project.description}
-                </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+      <p className="text-muted-foreground text-sm mb-4">
+        {project.description}
+      </p>
+    </div>
+
+    {/* Footer sticks to bottom */}
+    <div className="flex justify-between items-center mt-auto">
+      <div className="flex space-x-3">
+        <a
+          href={project.demoUrl}
+          target="_blank"
+          className="text-foreground/80 hover:text-primary transition-colors duration-300"
+        >
+          <ExternalLink size={20} />
+        </a>
+        <a
+          href={project.githubUrl}
+          target="_blank"
+          className="text-foreground/80 hover:text-primary transition-colors duration-300"
+        >
+          <Github size={20} />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
           ))}
         </div>
 
