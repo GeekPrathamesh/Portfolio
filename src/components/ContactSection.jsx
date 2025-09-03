@@ -16,8 +16,32 @@ export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+        e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mdkloprn", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        form.reset();
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Try again later.",
+        variant: "destructive",
+      });
+    }
+
+
 
     setIsSubmitting(true);
 
@@ -47,80 +71,81 @@ export const ContactSection = () => {
               {" "}
               Contact Information
             </h3>
-<div className="space-y-6">
-  {/* Email */}
-  <div className="flex items-center space-x-4">
-    <div className="p-3 rounded-full bg-primary/10">
-      <Mail className="h-6 w-6 text-primary" />
-    </div>
-    <div className="text-left">
-      <h4 className="font-medium">Email</h4>
-      <a
-        href="mailto:prathamesh.workx@gmail.com"
-        className="text-muted-foreground hover:text-primary transition-colors"
-      >
-        prathamesh.workx@gmail.com
-      </a>
-    </div>
-  </div>
+            <div className="space-y-6">
+              {/* Email */}
+              <div className="flex items-center space-x-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Mail className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-medium">Email</h4>
+                  <a
+                    href="mailto:prathamesh.workx@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    prathamesh.workx@gmail.com
+                  </a>
+                </div>
+              </div>
 
-  {/* Phone */}
-  <div className="flex items-center space-x-4">
-    <div className="p-3 rounded-full bg-primary/10">
-      <Phone className="h-6 w-6 text-primary" />
-    </div>
-    <div className="text-left">
-      <h4 className="font-medium">Phone</h4>
-      <a
-        href="tel:+919423341615"
-        className="text-muted-foreground hover:text-primary transition-colors"
-      >
-        9423341615
-      </a>
-    </div>
-  </div>
+              {/* Phone */}
+              <div className="flex items-center space-x-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Phone className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-medium">Phone</h4>
+                  <a
+                    href="tel:+919423341615"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    9423341615
+                  </a>
+                </div>
+              </div>
 
-  {/* Location */}
-  <div className="flex items-center space-x-4">
-    <div className="p-3 rounded-full bg-primary/10">
-      <MapPin className="h-6 w-6 text-primary" />
-    </div>
-    <div className="text-left">
-      <h4 className="font-medium">Location</h4>
-      <p className="text-muted-foreground">Kharghar, Navi Mumbai</p>
-    </div>
-  </div>
-</div>
-
+              {/* Location */}
+              <div className="flex items-center space-x-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <MapPin className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-medium">Location</h4>
+                  <p className="text-muted-foreground">Kharghar, Navi Mumbai</p>
+                </div>
+              </div>
+            </div>
 
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/geekprathamesh/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/geekprathamesh/"
+                  target="_blank"
+                >
                   <Linkedin />
                 </a>
 
-                <a href="https://www.instagram.com/geekprathamesh/" target="_blank">
+                <a
+                  href="https://www.instagram.com/geekprathamesh/"
+                  target="_blank"
+                >
                   <Instagram />
                 </a>
-
               </div>
             </div>
           </div>
 
-          <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
-          >
+          <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-            <form className="space-y-6" method="post"  action="https://formspree.io/f/mdkloprn">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
- 
+                  {" "}
                   Your Name
                 </label>
                 <input
